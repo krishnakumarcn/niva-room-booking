@@ -3,14 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 var firebase = require("firebase");
-// var config = {
-//   apiKey: "AIzaSyB3wIlsmFHyofbazQ0LS6wPH5rJGL9Si6A",
-//   authDomain: "aqueous-tube-168615.firebaseapp.com",
-//   databaseURL: "https://aqueous-tube-168615.firebaseio.com",
-//   projectId: "aqueous-tube-168615",
-//   storageBucket: "aqueous-tube-168615.appspot.com",
-//   messagingSenderId: "1073704194948"
-// }
+
  var config = {
     apiKey: "AIzaSyAG3GwXfZWfELxXQj9mUOwtylvCzvsutM0",
     authDomain: "niva-c8834.firebaseapp.com",
@@ -33,6 +26,11 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/roomBooking", function(req, res) {
+ 
+//  switch (req.body.result.contexts.name) {
+//     //Speech Synthesis Markup Language 
+//     case "music one":
+ 
   var state =
     req.body.result &&
     req.body.result.parameters &&
@@ -48,8 +46,9 @@ restService.post("/roomBooking", function(req, res) {
     
 //   });
   return res.json({
-    speech: state + "is the speech",
-    displayText: state + "is the state",
+//     speech: state + " is the speech",
+   speech: req.body.result.contexts.name,
+    displayText: state + " is the state",
     source: "webhook-echo-sample"
   });
 });
