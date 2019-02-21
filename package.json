@@ -2,7 +2,7 @@
   "name": "Niva-Room-Booking",
   "version": "1.0.0",
   "description": "NiVA - Room Booking Agent",
-  "main": "smartHomeBack.js",
+  "main": "nivaRoomBooking.js",
   "scripts": {
     "start": "node smartHomeBack.js"
   },
