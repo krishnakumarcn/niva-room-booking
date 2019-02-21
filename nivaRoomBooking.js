@@ -47,7 +47,7 @@ restService.post("/roomBooking", function(req, res) {
 //   });
   return res.json({
 //     speech: state + " is the speech",
-   speech: req.body.result.contexts.name,
+   speech: req.body.result.contexts.name + "",
     displayText: state + " is the state",
     source: "webhook-echo-sample"
   });
