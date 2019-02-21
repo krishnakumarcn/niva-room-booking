@@ -4,7 +4,7 @@
   "description": "NiVA - Room Booking Agent",
   "main": "nivaRoomBooking.js",
   "scripts": {
-    "start": "node smartHomeBack.js"
+    "start": "node nivaRoomBooking.js"
   },
   "dependencies": {
     "body-parser": "^1.15.0",
